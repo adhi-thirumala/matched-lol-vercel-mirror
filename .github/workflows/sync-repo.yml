@@ -17,7 +17,7 @@ jobs:
           REPO_URL: ${{ secrets.REMOTE_REPO_URL }}
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         run: |
-          git clone --depth 1 https://$ACCESS_TOKEN@github.com/other-user/other-repo.git temp-repo
+          git clone  $REPO_URL temp-repo
           cd temp-repo
           git remote add destination https://$ACCESS_TOKEN@github.com/adhi-thirumala/matched-lol-vercel-mirror.git
           git fetch --all
